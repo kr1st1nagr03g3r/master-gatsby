@@ -18,7 +18,7 @@ import Logo from './Logo';
 const NavStyles = styled.nav`
   margin-bottom: 3rem;
   .logo {
-    transform: translate&(-25%)
+    transform: translate&(-25%);
   }
   ul {
     margin: 0;
@@ -35,27 +35,22 @@ const NavStyles = styled.nav`
   }
   li {
     /* prettierignore*/
-    --rotate: -2deg;
     /* rotate creates a new variable, which can be called on li:nth-child(1) as --rotate: **deg;*/
-    transform: rotate(var(--rotate));
     order: 1;
-      /* grabs the first li and will not affect the rest of the li on the page */
+    /* grabs the first li and will not affect the rest of the li on the page */
     &:nth-child(1) {
-      --rotate: 1deg;
     }
-      /* grabs the second li and will not affect the rest of the li on the page... and so on */
+    /* grabs the second li and will not affect the rest of the li on the page... and so on */
     &:nth-child(2) {
-      -- rotate: -2.5deg
     }
     &:nth-child(4) {
-      -- rotate: 2.5deg
     }
-    &:hover {
-      --rotate: 3deg;
+    ${'' /* &:hover {
+      --rotate: 3deg; */}
     }
   }
   a {
-    font-size: 3rem;
+    font-size: 2rem @important;
     text-decoration: none;
     &:hover {
       color: var(--red);
@@ -72,25 +67,29 @@ export default function Nav() {
     <NavStyles>
       <ul>
         <li>
-          <Link to="/">Hot Now</Link>
-        </li>
-        <li>
-          <Link to="/pizzas">Pizza Menu</Link>
-        </li>
-        {/* <button type="button" onClick={goToSlicemasters}>
-          Click me to see slicemasters after 2 seconds
-        </button> */}
-        <li>
           {/* prettierignore */}
           <Link to="/">
             <Logo />
           </Link>
         </li>
         <li>
-          <Link to="/slicemasters">Slicemasters</Link>
+          <Link to="/research">Research</Link>
         </li>
         <li>
-          <Link to="/orders">Order Ahead!</Link>
+          <Link to="/mode-overview">
+            Model Overview
+            {/* <KeyboardArrowDownIcon /> */}
+          </Link>
+        </li>
+        {/* <button type="button" onClick={goToSlicemasters}>
+          Click me to see slicemasters after 2 seconds
+        </button> */}
+
+        <li>
+          <Link to="/contact">Contact</Link>
+        </li>
+        <li>
+          <Link to="/about">About</Link>
         </li>
       </ul>
     </NavStyles>

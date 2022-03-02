@@ -1,6 +1,5 @@
 // using Styled Components https://styled-components.com/
 import { createGlobalStyle } from 'styled-components';
-import bg from '../assets/images/bg.svg';
 import stripes from '../assets/images/stripes.svg';
 
 const GlobalStyles = createGlobalStyle`
@@ -9,16 +8,17 @@ const GlobalStyles = createGlobalStyle`
     --black: #2E2E2E;
     --yellow: #ffc600;
     --white: #fff;
-    --grey: #efefef;
+    --grey: #33333;
   }
   html {
-    background-image: url(${bg});
+    background-color: #333;
     background-size: 450px;
     background-attachment: fixed;
     font-size: 10px;
   }
 
   body {
+    background:#333;
     font-size: 2rem;
   }
 
@@ -77,13 +77,20 @@ const GlobalStyles = createGlobalStyle`
   img {
     max-width: 100%;
   }
+}
 
-  .tilt {
-    transform: rotate(-2deg);
-    position: relative;
-    display: inline-block;
-  }
+li {
+  font-family: Nunito;
+font-style: normal;
+font-weight: normal;
+font-size: 36px;
+line-height: 43px;
+/* or 119% */
 
+text-align: center;
+
+color: #FFFFFF;
+}
 `;
 
 export default GlobalStyles;

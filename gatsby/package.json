@@ -23,6 +23,8 @@
     }
   },
   "dependencies": {
+    "@material-ui/core": "^4.12.3",
+    "@material-ui/icons": "^4.11.2",
     "babel-plugin-styled-components": "^1.11.1",
     "dotenv": "^8.2.0",
     "gatsby": "^2.24.63",
@@ -31,6 +33,7 @@
     "gatsby-plugin-styled-components": "^3.3.10",
     "gatsby-source-sanity": "^6.0.4",
     "isomorphic-fetch": "^2.2.1",
+    "material-design-icons": "^3.0.1",
     "netlify-cli": "^2.62.0",
     "netlify-lambda": "^2.0.1",
     "normalize.css": "^8.0.1",
